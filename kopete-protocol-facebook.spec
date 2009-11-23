@@ -13,13 +13,13 @@
 %define gitrev 3376a46
 
 Name:           kopete-protocol-facebook
-License:        GPL v2 or later
+License:        GPLv2+
 Url:            http://github.com/dmacvicar/kopete-facebook
-Group:          System/GUI/KDE
+Group:          Networking/Instant messaging
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 Summary:        Facebook Protocol support for Kopete
 Version:        0.1.4
-Release:        %mkrel 2
+Release:        %mkrel 3
 Source:         scvalex-kopete-facebook-%{gitrev}.tar.gz
 Requires:	libqjson0
 BuildRequires:  kdenetwork4-devel
