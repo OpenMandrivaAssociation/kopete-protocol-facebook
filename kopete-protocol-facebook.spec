@@ -23,7 +23,7 @@ Release:        %mkrel 4
 Source:         scvalex-kopete-facebook-%{gitrev}.tar.gz
 Requires:	libqjson0
 BuildRequires:  kdenetwork4-devel
-BuildRequires:  qjson-devel >= 0.6 
+BuildRequires:  libqjson-devel >= 0.6 
 
 %description
 Facebook Protocol Support for Kopete
