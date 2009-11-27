@@ -7,7 +7,7 @@ Group:          Networking/Instant messaging
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 Summary:        Facebook Protocol support for Kopete
 Version:        0.1.4
-Release:        %mkrel 4
+Release:        %mkrel 5
 Source:         scvalex-kopete-facebook-%{gitrev}.tar.gz
 BuildRequires:  kdenetwork4-devel
 BuildRequires:  libqjson-devel >= 0.6 
