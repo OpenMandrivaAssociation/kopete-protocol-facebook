@@ -1,15 +1,3 @@
-#
-# spec file for package kopete-protocol-facebook
-#
-# Copyright (c) 2008 SUSE LINUX Products GmbH, Nuernberg, Germany.
-# This file and all modifications and additions to the pristine
-# package are under the same license as the package itself.
-#
-# Please submit bugfixes or comments via http://bugs.opensuse.org/
-#
-
-# norootforbuild
-
 %define gitrev 3376a46
 
 Name:           kopete-protocol-facebook
@@ -21,37 +9,28 @@ Summary:        Facebook Protocol support for Kopete
 Version:        0.1.4
 Release:        %mkrel 4
 Source:         scvalex-kopete-facebook-%{gitrev}.tar.gz
-Requires:	libqjson0
 BuildRequires:  kdenetwork4-devel
 BuildRequires:  libqjson-devel >= 0.6 
 
 %description
 Facebook Protocol Support for Kopete
 
+%files
+%defattr(-,root,root)
+%_kde_libdir/kde4/kopete_facebook.so
+%_kde_appsdir/kopete/icons/*
+%_kde_datadir/kde4/services/kopete_facebook.desktop
+
+#--------------------------------------------------------------------
+
 %prep
 %setup -n scvalex-kopete-facebook-%{gitrev}
 
 %build
-mkdir build
-cd build
-cmake -DCMAKE_INSTALL_PREFIX=%{buildroot}/usr -DKOPETE_FACEBOOK_OUTOFTREE=1 -DCMAKE_BUILD_TYPE=DebugFull  ..
+%cmake_kde4
 
 %install
-cd build
-%makeinstall
-
-%post -p /sbin/ldconfig
-
-%postun -p /sbin/ldconfig
+%makeinstall_std -C build 
 
 %clean
 rm -rf $RPM_BUILD_ROOT
-
-%files
-%defattr(-,root,root)
-#%doc AUTHORS COPYING
-/usr/%_lib/kde4/kopete_facebook.so
-/usr/share/apps/kopete/icons/*
-#/usr/share/kde4/apps/kopete_facebook
-/usr/share/kde4/services/kopete_facebook.desktop
-
