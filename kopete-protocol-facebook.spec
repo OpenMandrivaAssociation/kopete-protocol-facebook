@@ -6,9 +6,9 @@ Url:            http://github.com/dmacvicar/kopete-facebook
 Group:          Networking/Instant messaging
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 Summary:        Facebook Protocol support for Kopete
-Version:        0.1.4
-Release:        %mkrel 5
-Source:         scvalex-kopete-facebook-%{gitrev}.tar.gz
+Version:        0.1.5
+Release:        %mkrel 1
+Source:         dmacvicar-kopete-facebook-%{gitrev}.tar.gz
 BuildRequires:  kdenetwork4-devel
 BuildRequires:  libqjson-devel >= 0.6 
 
@@ -24,7 +24,7 @@ Facebook Protocol Support for Kopete
 #--------------------------------------------------------------------
 
 %prep
-%setup -n scvalex-kopete-facebook-%{gitrev}
+%setup -n dmacvicar-kopete-facebook-%{gitrev}
 
 %build
 %cmake_kde4
