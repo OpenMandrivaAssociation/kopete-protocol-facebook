@@ -2,17 +2,17 @@
 
 Summary:	Facebook Protocol support for Kopete
 Name:		kopete-protocol-facebook
-License:	GPLv2+
-Url:		http://github.com/dmacvicar/kopete-facebook
-Group:		Networking/Instant messaging
 Version:	0.1.5
-Release:	2
-Source:		dmacvicar-kopete-facebook-%{gitrev}.tar.gz
-BuildRequires:	kdenetwork4-devel
+Release:	4
+License:	GPLv2+
+Group:		Networking/Instant messaging
+Url:		http://github.com/dmacvicar/kopete-facebook
+Source0:	dmacvicar-kopete-facebook-%{gitrev}.tar.gz
+BuildRequires:	kopete-devel
 BuildRequires:	pkgconfig(QJson)
 
 %description
-Facebook Protocol Support for Kopete
+Facebook Protocol support for Kopete.
 
 %files
 %{_kde_libdir}/kde4/kopete_facebook.so
@@ -28,5 +28,5 @@ Facebook Protocol Support for Kopete
 %cmake_kde4
 
 %install
-%makeinstall_std -C build 
+%makeinstall_std -C build
 
