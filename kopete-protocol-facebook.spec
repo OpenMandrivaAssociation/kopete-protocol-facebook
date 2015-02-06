@@ -3,7 +3,7 @@
 Summary:	Facebook Protocol support for Kopete
 Name:		kopete-protocol-facebook
 Version:	0.1.5
-Release:	4
+Release:	5
 License:	GPLv2+
 Group:		Networking/Instant messaging
 Url:		http://github.com/dmacvicar/kopete-facebook
