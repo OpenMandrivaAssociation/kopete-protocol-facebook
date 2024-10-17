@@ -6,7 +6,7 @@ Version:	0.1.5
 Release:	5
 License:	GPLv2+
 Group:		Networking/Instant messaging
-Url:		http://github.com/dmacvicar/kopete-facebook
+Url:		https://github.com/dmacvicar/kopete-facebook
 Source0:	dmacvicar-kopete-facebook-%{gitrev}.tar.gz
 BuildRequires:	kopete-devel
 BuildRequires:	pkgconfig(QJson)
